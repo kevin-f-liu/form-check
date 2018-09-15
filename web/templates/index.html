@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+           <title>Form Check</title>
+           <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="description" content="Video Uploader to Check Exercise ">
+           <meta name="keywords" content="global, template, html, sass, jquery">
+           <meta name="author" content="HTN Team">
+           <link rel="stylesheet" href="assets/css/main.css">
+          
+           <!-- Favicon -->
+           <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+           <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+          
+       </head>
+  <body>
+     <form action = "http://localhost:5000/uploader" method = "POST"
+        enctype = "multipart/form-data">
+        <h1> Form Check </h1>
+        <select name="select_value">
+               <option value="Squats">Squats</option>
+               <option value="Bicep Curls">Bicep Curls</option>
+               <option value="Pull Ups">Pull Ups</option>
+       </select>
+        <input type = "file" name = "file" />
+        <input type = "submit"/>
+     </form>
+    
+  </body>
+</html>

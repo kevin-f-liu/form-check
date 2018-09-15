@@ -17,8 +17,12 @@
        </head>
   <body>
       <div>
-          {{ select_value }}
-          {{ count }}
+          Exercise: {{ select_value }}
+          Frames: {{ count }}
+          <!-- <video src="{{url_for('static', filename='text.mp4')}}"  width="320" height="240" controls/> -->
+          {% for frame in range((count / 25)|int) %}
+            <img src="{{url_for('static', filename= video + 'frame%d.jpg' % frame)}}" alt="frames" width="200px" height="auto"/>
+          {% endfor %}
       </div>
     
   </body>

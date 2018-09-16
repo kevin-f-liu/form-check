@@ -47,11 +47,6 @@ def uploaded_file():
         select_value = request.form.get('select_value')
         
         vidcap = cv2.VideoCapture(video)
-
-        vidcap.set(3, 1280)
-        vidcap.set(4, 720)
-
-        print(os.path.getsize(vidcap))
         
         success,image = vidcap.read()
         count = 0

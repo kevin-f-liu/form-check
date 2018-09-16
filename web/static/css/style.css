@@ -2876,10 +2876,7 @@ ul.the-icons {
 }
 
 div.img-gallery{
-	overflow-y: scroll;
-	overflow-x: auto;
-	height: 100px;
-	background-color:black;
+
 }
 
 #img-single {
@@ -2889,3 +2886,16 @@ div.img-gallery{
 }
 /* Theme Styler :: End */
 
+#myProgress {
+	width: 1000px;
+	background-color: #ddd;
+  }
+  
+#myBar {
+	width: 10px;
+	height: 30px;
+	background-color: #4CAF50;
+	text-align: center; /* To center it horizontally (if you want) */
+	line-height: 30px; /* To center it vertically */
+	color: white; 
+}

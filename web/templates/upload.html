@@ -43,7 +43,7 @@
             <div class="row nomargin">
                 <div class="span4">
                 <div class="logo">
-                    <h1><a href="/"><i class="icon-tint"></i> Form Check</a></h1>
+                        <h1><a href="/">Form <img src="{{url_for('static', filename='check.png')}}" style="width: 30px; height: 30px"></a></h1>
                 </div>
                 </div>
             </div>
@@ -53,7 +53,18 @@
           <div style="margin-left: 40px">
               <br/>
           <h3 styles="padding-top: 10px">Exercise: {{ select_value }}</h3>
-          <h3> Frames: {{ (count / 24)|int }} </h3>
+         
+        </div>
+        <div style="margin-left: 40px"> 
+            <h3> Tips to improve your Exercises: </h3>
+            {% for bodyPart in tips %}
+                {% for keys, values in bodyPart.items() %}
+                    <h3 style="text-transform: capitalize"> {{ keys }} </h3>
+                    {% for links in range(values|length) %}
+                        <ul><li><a href={{ values[links] }} target="_blank"> {{ values[links] }} </li></ul>
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
         </div>
         <div id="row_team" style="margin:auto">
           <!-- <video src="{{url_for('static', filename='text.mp4')}}"  width="320" height="240" controls/> -->
@@ -68,11 +79,13 @@
                 </a>
                 
             </div>
-        
         </div>
           {% endfor %}
         </div>
-         
+        <!-- <form action = "http://localhost:5000/uploader/contact/{{video}}/{{select_value}}/{{count}}/{{tips}}" method = "POST" 
+         enctype = "multipart/form-data">
+            <input id="send" type = "submit"/>
+        </form> -->
       </div>
       
       
